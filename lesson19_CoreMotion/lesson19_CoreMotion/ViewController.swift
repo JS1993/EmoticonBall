@@ -26,15 +26,15 @@ class ViewController: UIViewController,UIAccelerometerDelegate {
     balls.frame=CGRectMake(0, 0, 50, 50)
     balls.center=self.view.center
     self.view.addSubview(balls)
-//定义拖动手势
-//    let pan=UIPanGestureRecognizer(target: self, action: "panDid:")
-//    pan.maximumNumberOfTouches=1
-//    balls.addGestureRecognizer(pan)
-//        func panDid(recognizer:UISwipeGestureRecognizer)
-//        {
-//            let point=recognizer.locationInView(self.view)
-//            balls.center=point
-//        }
+    /// 定义拖动手势
+    let pan=UIPanGestureRecognizer(target: self, action: Selector("panDid:"))
+    pan.maximumNumberOfTouches=1
+    balls.addGestureRecognizer(pan)
+        func panDid(recognizer:UISwipeGestureRecognizer)
+        {
+            let point=recognizer.locationInView(self.view)
+            balls.center=point
+        }
     
     motionManager.accelerometerUpdateInterval = 1/60
     if (motionManager.accelerometerAvailable)
