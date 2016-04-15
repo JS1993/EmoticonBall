@@ -20,45 +20,7 @@ class ViewController: UIViewController,UIAccelerometerDelegate {
         let imageView=UIImageView(image: UIImage(named: "icon"))
         imageView.frame=CGRectMake(0, 20, 320, 565)
         self.view.addSubview(imageView)
-//        ball = UIImageView(image: UIImage(named: "ball"))
-//        //放一个小球在中央
-//        ball.frame=CGRectMake(0, 0, 50, 50)
-//        ball.center=self.view.center
-//        self.view.addSubview(ball)
-//        
-//        motionManager.accelerometerUpdateInterval = 1/60
-//        if (motionManager.accelerometerAvailable)
-//        {
-//           let queue = NSOperationQueue.currentQueue()
-//            motionManager.startAccelerometerUpdatesToQueue(queue!,withHandler:
-//                {(accelerometerData,error) in
-//                //动态小球位置设置
-//                    
-//                self.speedX += accelerometerData!.acceleration.x
-//                self.speedY += accelerometerData!.acceleration.y
-//                var posX=self.ball.center.x + CGFloat(self.speedX)
-//                var posY=self.ball.center.y - CGFloat(self.speedY)
-//                //碰到边框后的反弹效果
-//                if posX<53 {
-//                    posX=53
-//                    self.speedX *= -0.4
-//                }else if posX > 267 {
-//                    posX=267
-//                    //碰到右边边框时以0.4倍速度反弹
-//                    self.speedX *= -0.4
-//                }
-//                if posY<63 {
-//                   posY=63
-//                   //碰到上面的边框不反弹
-//                   self.speedY=0
-//                }else if posY>520 {
-//                    posY=520
-//                    //碰到下面以1.5倍速度反弹
-//                    self.speedY *= -1.1
-//                    }
-//                    self.ball.center = CGPointMake(posX, posY)
-//            })
-//        }
+
     balls = UIImageView(image: UIImage(named: "balls"))
     //放一个小球在中央
     balls.frame=CGRectMake(0, 0, 50, 50)
